@@ -18,10 +18,13 @@ import { BussinessIntelligenceService } from './bussiness-intelligence/bussiness
 import { BussinessIntelligenceModule } from './bussiness-intelligence/bussiness-intelligence.module';
 import { CommentsController } from './comments/comments.controller';
 import { CommentsModule } from './comments/comments.module';
+import { CopounService } from './copoun/copoun.service';
+import { CopounController } from './copoun/copoun.controller';
+import { CopounModule } from './copoun/copoun.module';
 
 @Module({
-  imports: [LoginModule, ClientModule, CategoryModule, DiscountModule, ReportsModule, LabelSettingModule, BussinessIntelligenceModule, CommentsModule],
-  controllers: [AppController, LoginController, DiscountController, LabelSettingController, CommentsController],
-  providers: [AppService, LoginService, ClientService, CategoryService, ReportsService, BussinessIntelligenceService],
+  imports: [LoginModule, ClientModule, CategoryModule, DiscountModule, ReportsModule, LabelSettingModule, BussinessIntelligenceModule, CommentsModule, CopounModule],
+  controllers: [AppController, LoginController, DiscountController, LabelSettingController, CommentsController, CopounController],
+  providers: [AppService, LoginService, ClientService, CategoryService, ReportsService, BussinessIntelligenceService, CopounService],
 })
 export class AppModule {}
