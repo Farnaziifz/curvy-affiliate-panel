@@ -16,10 +16,12 @@ import { LabelSettingController } from './label-setting/label-setting.controller
 import { LabelSettingModule } from './label-setting/label-setting.module';
 import { BussinessIntelligenceService } from './bussiness-intelligence/bussiness-intelligence.service';
 import { BussinessIntelligenceModule } from './bussiness-intelligence/bussiness-intelligence.module';
+import { CommentsController } from './comments/comments.controller';
+import { CommentsModule } from './comments/comments.module';
 
 @Module({
-  imports: [LoginModule, ClientModule, CategoryModule, DiscountModule, ReportsModule, LabelSettingModule, BussinessIntelligenceModule],
-  controllers: [AppController, LoginController, DiscountController, LabelSettingController],
+  imports: [LoginModule, ClientModule, CategoryModule, DiscountModule, ReportsModule, LabelSettingModule, BussinessIntelligenceModule, CommentsModule],
+  controllers: [AppController, LoginController, DiscountController, LabelSettingController, CommentsController],
   providers: [AppService, LoginService, ClientService, CategoryService, ReportsService, BussinessIntelligenceService],
 })
 export class AppModule {}
