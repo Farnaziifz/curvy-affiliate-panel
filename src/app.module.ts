@@ -21,9 +21,10 @@ import { CommentsModule } from './comments/comments.module';
 import { CopounService } from './copoun/copoun.service';
 import { CopounController } from './copoun/copoun.controller';
 import { CopounModule } from './copoun/copoun.module';
+import { CreditsModule } from './credits/credits.module';
 
 @Module({
-  imports: [LoginModule, ClientModule, CategoryModule, DiscountModule, ReportsModule, LabelSettingModule, BussinessIntelligenceModule, CommentsModule, CopounModule],
+  imports: [LoginModule, ClientModule, CategoryModule, DiscountModule, ReportsModule, LabelSettingModule, BussinessIntelligenceModule, CommentsModule, CopounModule, CreditsModule],
   controllers: [AppController, LoginController, DiscountController, LabelSettingController, CommentsController, CopounController],
   providers: [AppService, LoginService, ClientService, CategoryService, ReportsService, BussinessIntelligenceService, CopounService],
 })
