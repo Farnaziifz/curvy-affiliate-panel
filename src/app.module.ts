@@ -8,10 +8,12 @@ import { ClientService } from './client/client.service';
 import { ClientModule } from './client/client.module';
 import { CategoryService } from './category/category.service';
 import { CategoryModule } from './category/category.module';
+import { DiscountController } from './discount/discount.controller';
+import { DiscountModule } from './discount/discount.module';
 
 @Module({
-  imports: [LoginModule, ClientModule, CategoryModule],
-  controllers: [AppController, LoginController],
+  imports: [LoginModule, ClientModule, CategoryModule, DiscountModule],
+  controllers: [AppController, LoginController, DiscountController],
   providers: [AppService, LoginService, ClientService, CategoryService],
 })
 export class AppModule {}
