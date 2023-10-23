@@ -12,10 +12,12 @@ import { DiscountController } from './discount/discount.controller';
 import { DiscountModule } from './discount/discount.module';
 import { ReportsService } from './reports/reports.service';
 import { ReportsModule } from './reports/reports.module';
+import { LabelSettingController } from './label-setting/label-setting.controller';
+import { LabelSettingModule } from './label-setting/label-setting.module';
 
 @Module({
-  imports: [LoginModule, ClientModule, CategoryModule, DiscountModule, ReportsModule],
-  controllers: [AppController, LoginController, DiscountController],
+  imports: [LoginModule, ClientModule, CategoryModule, DiscountModule, ReportsModule, LabelSettingModule],
+  controllers: [AppController, LoginController, DiscountController, LabelSettingController],
   providers: [AppService, LoginService, ClientService, CategoryService, ReportsService],
 })
 export class AppModule {}
