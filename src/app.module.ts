@@ -22,10 +22,12 @@ import { CopounService } from './copoun/copoun.service';
 import { CopounController } from './copoun/copoun.controller';
 import { CopounModule } from './copoun/copoun.module';
 import { CreditsModule } from './credits/credits.module';
+import { CashBackController } from './cash-back/cash-back.controller';
+import { CashBackModule } from './cash-back/cash-back.module';
 
 @Module({
-  imports: [LoginModule, ClientModule, CategoryModule, DiscountModule, ReportsModule, LabelSettingModule, BussinessIntelligenceModule, CommentsModule, CopounModule, CreditsModule],
-  controllers: [AppController, LoginController, DiscountController, LabelSettingController, CommentsController, CopounController],
+  imports: [LoginModule, ClientModule, CategoryModule, DiscountModule, ReportsModule, LabelSettingModule, BussinessIntelligenceModule, CommentsModule, CopounModule, CreditsModule, CashBackModule],
+  controllers: [AppController, LoginController, DiscountController, LabelSettingController, CommentsController, CopounController, CashBackController],
   providers: [AppService, LoginService, ClientService, CategoryService, ReportsService, BussinessIntelligenceService, CopounService],
 })
 export class AppModule {}
