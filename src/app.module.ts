@@ -1,4 +1,5 @@
 import { Module } from '@nestjs/common';
+import { MongooseModule } from '@nestjs/mongoose';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { LoginService } from './login/login.service';
@@ -27,8 +28,38 @@ import { CashBackModule } from './cash-back/cash-back.module';
 import { ScoreModule } from './score/score.module';
 
 @Module({
-  imports: [LoginModule, ClientModule, CategoryModule, DiscountModule, ReportsModule, LabelSettingModule, BussinessIntelligenceModule, CommentsModule, CopounModule, CreditsModule, CashBackModule, ScoreModule],
-  controllers: [AppController, LoginController, DiscountController, LabelSettingController, CommentsController, CopounController, CashBackController],
-  providers: [AppService, LoginService, ClientService, CategoryService, ReportsService, BussinessIntelligenceService, CopounService],
+  imports: [
+    MongooseModule.forRoot('mongodb://localhost/laphro-affiliate'),
+    LoginModule,
+    ClientModule,
+    CategoryModule,
+    DiscountModule,
+    ReportsModule,
+    LabelSettingModule,
+    BussinessIntelligenceModule,
+    CommentsModule,
+    CopounModule,
+    CreditsModule,
+    CashBackModule,
+    ScoreModule,
+  ],
+  controllers: [
+    AppController,
+    LoginController,
+    DiscountController,
+    LabelSettingController,
+    CommentsController,
+    CopounController,
+    CashBackController,
+  ],
+  providers: [
+    AppService,
+    LoginService,
+    ClientService,
+    CategoryService,
+    ReportsService,
+    BussinessIntelligenceService,
+    CopounService,
+  ],
 })
 export class AppModule {}
